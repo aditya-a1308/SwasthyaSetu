@@ -1,0 +1,137 @@
+{
+  "app_name": "SwasthyaSetu",
+  "tagline": "Doctor in 10 minutes, from your village",
+  "nav": {
+    "home": "Home",
+    "login": "Login",
+    "signup": "Sign Up",
+    "dashboard": "Dashboard"
+  },
+  "landing": {
+    "hero_title": "Get a Doctor Consultation in 10 Minutes",
+    "hero_subtitle": "No travel. No waiting. Talk to a specialist doctor from your home via phone or video call.",
+    "cta_patient": "Book a Consultation",
+    "cta_doctor": "Join as Doctor",
+    "how_it_works": "How It Works",
+    "step_title1": "Describe Symptoms",
+    "step_title2": "Get Matched",
+    "step_title3": "Consult Doctor",
+    "step1": "Describe your symptoms to our AI assistant",
+    "step2": "Get matched with the right specialist",
+    "step3": "Consult via video or phone call",
+    "features_title": "Why SwasthyaSetu?",
+    "feature1_title": "Works on 2G",
+    "feature1_desc": "Audio calls available even on slow networks",
+    "feature2_title": "In Your Language",
+    "feature2_desc": "Hindi, Marathi, and English supported",
+    "feature3_title": "Emergency Support",
+    "feature3_desc": "Ambulance booking and priority consultations",
+    "feature4_title": "Your Health Records",
+    "feature4_desc": "All prescriptions and history saved securely"
+  },
+  "auth": {
+    "login_title": "Welcome Back",
+    "signup_title": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "full_name": "Full Name",
+    "phone": "Phone Number",
+    "i_am": "I am a",
+    "patient": "Patient",
+    "doctor": "Doctor",
+    "login_btn": "Login",
+    "signup_btn": "Create Account",
+    "no_account": "Don't have an account?",
+    "have_account": "Already have an account?",
+    "or_login": "Login here"
+  },
+  "onboarding": {
+    "patient_title": "Tell us about yourself",
+    "doctor_title": "Set up your doctor profile",
+    "dob": "Date of Birth",
+    "blood_group": "Blood Group",
+    "address": "Village / Address",
+    "emergency_contact": "Emergency Contact Name",
+    "emergency_phone": "Emergency Contact Phone",
+    "medical_history": "Any existing conditions? (diabetes, BP, etc.)",
+    "specialty": "Specialization",
+    "qualification": "Qualification (MBBS, MD, etc.)",
+    "experience": "Years of Experience",
+    "bio": "About yourself (patients will see this)",
+    "continue": "Continue",
+    "skip": "Skip for now"
+  },
+  "dashboard": {
+    "patient": {
+      "greeting": "Hello",
+      "book_consultation": "Book Consultation",
+      "chat_with_ai": "Chat with AI Assistant",
+      "emergency": "Emergency / Ambulance",
+      "my_appointments": "My Appointments",
+      "my_prescriptions": "My Prescriptions",
+      "no_appointments": "No upcoming appointments"
+    },
+    "doctor": {
+      "greeting": "Dr.",
+      "go_active": "Go Active",
+      "go_inactive": "Go Offline",
+      "active_status": "You are Active - patients can book you",
+      "inactive_status": "You are Offline",
+      "upcoming": "Upcoming Appointments",
+      "join_call": "Join Call",
+      "write_prescription": "Write Prescription",
+      "no_appointments": "No upcoming appointments"
+    },
+    "admin": {
+      "title": "Admin Dashboard",
+      "total_patients": "Total Patients",
+      "total_doctors": "Total Doctors",
+      "total_appointments": "Total Appointments",
+      "emergency_requests": "Emergency Requests",
+      "active_doctors": "Active Doctors"
+    }
+  },
+  "emergency": {
+    "title": "Emergency Help",
+    "subtitle": "We will send an ambulance to your location",
+    "describe": "Describe the emergency",
+    "location": "Your location / address",
+    "call_ambulance": "Call Ambulance",
+    "calling": "Connecting...",
+    "dispatched": "Ambulance dispatched! Stay calm.",
+    "or_call": "Or call directly: 108"
+  },
+  "ai_chat": {
+    "title": "AI Health Assistant",
+    "subtitle": "Describe your symptoms. I will help you understand next steps.",
+    "placeholder": "Type your symptoms here...",
+    "send": "Send",
+    "book_doctor": "Book Doctor Now",
+    "emergency_detected": "This sounds serious. Please call 108 or book emergency consultation.",
+    "thinking": "Thinking..."
+  },
+  "appointments": {
+    "book_title": "Book a Consultation",
+    "select_doctor": "Select Doctor",
+    "select_date": "Select Date & Time",
+    "call_type": "Consultation Type",
+    "video_call": "Video Call (Google Meet)",
+    "audio_call": "Audio Call (Phone)",
+    "symptoms": "Describe your symptoms",
+    "confirm_book": "Confirm Booking",
+    "payment_title": "Payment",
+    "pay_now": "Pay Now",
+    "consultation_fee": "Consultation Fee",
+    "join_call": "Join Call"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong. Please try again.",
+    "save": "Save",
+    "cancel": "Cancel",
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "logout": "Logout"
+  }
+}
