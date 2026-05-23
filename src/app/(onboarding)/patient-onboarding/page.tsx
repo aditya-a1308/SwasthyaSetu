@@ -68,8 +68,8 @@ export default function PatientOnboardingPage() {
 
           <div className="mb-5">
             <div className="mb-2 flex items-center justify-between text-xs font-medium text-slate-500">
-              <span>Step 2 of 2</span>
-              <span className="text-emerald-600">Complete</span>
+              <span>{t('onboarding.step_label')}</span>
+              <span className="text-emerald-600">{t('onboarding.step_complete')}</span>
             </div>
             <div className="h-3 w-full rounded-full bg-slate-100 p-0.5">
               <div className="h-2.5 w-full rounded-full bg-emerald-600" />
@@ -80,7 +80,7 @@ export default function PatientOnboardingPage() {
             {t('onboarding.patient_title')}
           </h1>
           <p className="mt-2 text-sm text-slate-500">
-            This helps doctors understand you better.
+            {t('onboarding.patient_subtitle')}
           </p>
         </div>
 
@@ -114,7 +114,7 @@ export default function PatientOnboardingPage() {
               onChange={(event) => setBloodGroup(event.target.value)}
               className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-emerald-500"
             >
-              <option value="">Select</option>
+              <option value="">{t('onboarding.blood_select')}</option>
               <option value="A+">A+</option>
               <option value="A-">A-</option>
               <option value="B+">B+</option>
@@ -184,7 +184,7 @@ export default function PatientOnboardingPage() {
             <textarea
               id="medicalHistory"
               rows={3}
-              placeholder="e.g. Diabetes, High BP"
+              placeholder={t('onboarding.medical_placeholder')}
               value={medicalHistory}
               onChange={(event) => setMedicalHistory(event.target.value)}
               className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 focus:border-transparent focus:outline-none focus:ring-2 focus:ring-emerald-500"

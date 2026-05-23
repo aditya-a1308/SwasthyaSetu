@@ -46,9 +46,9 @@ export default function LoginPage() {
         <div className="text-3xl font-bold">{t('app_name')}</div>
         <p className="mt-3 text-lg text-emerald-100">{t('tagline')}</p>
         <div className="mt-8 flex flex-col gap-2">
-          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">✓ Video &amp; Audio Calls</span>
-          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">✓ AI Health Assistant</span>
-          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">✓ 3 Languages</span>
+          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{t('auth.aside_benefit1')}</span>
+          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{t('auth.aside_benefit2')}</span>
+          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{t('auth.aside_benefit3')}</span>
         </div>
       </aside>
 
@@ -58,7 +58,7 @@ export default function LoginPage() {
             <div className="mb-3 text-4xl">🩺</div>
             <h1 className="text-2xl font-bold text-slate-800">{t('auth.login_title')}</h1>
             <p className="mt-2 text-sm text-slate-500">
-              Welcome back! Enter your details.
+              {t('auth.login_subtitle')}
             </p>
           </div>
 
@@ -114,7 +114,7 @@ export default function LoginPage() {
 
           <div className="my-6 flex items-center gap-4">
             <div className="h-px flex-1 bg-slate-200" />
-            <span className="text-sm text-slate-300">──── or ────</span>
+            <span className="text-sm text-slate-300">──── {t('common.or')} ────</span>
             <div className="h-px flex-1 bg-slate-200" />
           </div>
 

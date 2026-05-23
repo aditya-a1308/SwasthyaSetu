@@ -66,7 +66,7 @@ export default function DoctorOnboardingPage() {
     <div className="flex min-h-screen items-center justify-center bg-gray-50 px-4 py-10">
       <div className="w-full max-w-lg rounded-2xl bg-white p-8 shadow-md">
         <div className="mb-6">
-          <p className="mb-1 text-xs text-gray-500">Step 2 of 2</p>
+          <p className="mb-1 text-xs text-gray-500">{t('onboarding.step_label')}</p>
           <div className="h-2 w-full rounded-full bg-gray-200">
             <div className="h-2 w-full rounded-full bg-green-600" />
           </div>
@@ -90,7 +90,7 @@ export default function DoctorOnboardingPage() {
               onChange={(event) => setSpecialty(event.target.value)}
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
             >
-              <option value="">Select</option>
+              <option value="">{t('onboarding.specialty_select')}</option>
               <option value="General Physician">General Physician</option>
               <option value="Pediatrician">Pediatrician</option>
               <option value="Gynecologist">Gynecologist</option>
@@ -114,7 +114,7 @@ export default function DoctorOnboardingPage() {
             <input
               id="qualification"
               type="text"
-              placeholder="MBBS, MD..."
+              placeholder={t('onboarding.qualification_placeholder')}
               value={qualification}
               onChange={(event) => setQualification(event.target.value)}
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -140,17 +140,17 @@ export default function DoctorOnboardingPage() {
           </div>
 
           <div>
-            <label
+             <label
               htmlFor="consultationFee"
               className="mb-1 block text-sm font-medium text-gray-700"
             >
-              Consultation Fee (₹)
+              {t('onboarding.consultation_fee')}
             </label>
             <input
               id="consultationFee"
               type="number"
               min="0"
-              placeholder="e.g. 200"
+              placeholder={t('onboarding.fee_placeholder')}
               value={consultationFee}
               onChange={(event) => setConsultationFee(event.target.value)}
               className="w-full rounded-xl border border-gray-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -159,7 +159,7 @@ export default function DoctorOnboardingPage() {
 
           <div>
             <label className="mb-1 block text-sm font-medium text-gray-700">
-              Languages Spoken
+              {t('onboarding.languages_spoken')}
             </label>
             <div className="flex flex-wrap gap-3">
               <label className="flex items-center gap-2 rounded-xl border border-gray-200 px-4 py-2">
