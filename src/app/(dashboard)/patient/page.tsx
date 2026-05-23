@@ -131,7 +131,7 @@ export default function PatientDashboardPage() {
         <div className="flex items-center justify-between px-6 py-3.5">
           <Link href="/" className="flex items-center gap-2 font-bold text-emerald-700">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-600 text-sm text-white">🩺</span>
-            <span className="hidden sm:block">SwasthyaSetu</span>
+            <span className="hidden sm:block">{t('app_name')}</span>
           </Link>
 
           <div className="flex items-center gap-3">
@@ -140,19 +140,19 @@ export default function PatientDashboardPage() {
               onClick={() => setChatOpen(true)}
               className="flex items-center gap-1.5 rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1.5 text-xs font-medium text-emerald-700 transition hover:bg-emerald-100"
             >
-              🤖 <span className="hidden sm:block">AI Assistant</span>
+              🤖 <span className="hidden sm:block">{t('dashboard.patient.ai_title')}</span>
             </button>
             <div className="h-8 w-px bg-slate-200" />
             <div className="hidden text-right sm:block">
               <p className="text-sm font-semibold text-slate-800">{profile?.full_name ?? ''}</p>
-              <p className="text-xs text-slate-500">Patient</p>
+              <p className="text-xs text-slate-500">{t('dashboard.patient.patient_label')}</p>
             </div>
             <button
               type="button"
               onClick={handleLogout}
               className="rounded-lg px-3 py-1.5 text-xs font-medium text-red-500 transition hover:bg-red-50 hover:text-red-700"
             >
-              Logout
+              {t('dashboard.patient.logout')}
             </button>
           </div>
         </div>
@@ -167,11 +167,11 @@ export default function PatientDashboardPage() {
               <h1 className="text-xl font-bold">
                 {t('dashboard.patient.greeting')}, {firstName} 👋
               </h1>
-              <p className="mt-1 text-sm text-emerald-100">Your health, our priority. How can we help today?</p>
+              <p className="mt-1 text-sm text-emerald-100">{t('dashboard.patient.subtitle')}</p>
             </div>
             <div className="hidden text-right sm:block">
               <p className="text-2xl font-bold">{todayAppts.length}</p>
-              <p className="text-xs text-emerald-200">appointments today</p>
+              <p className="text-xs text-emerald-200">{t('dashboard.patient.appointments_today')}</p>
             </div>
           </div>
         </div>
@@ -184,8 +184,8 @@ export default function PatientDashboardPage() {
           >
             <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-50 text-2xl group-hover:bg-emerald-100 transition">📅</div>
             <h2 className="font-semibold text-slate-800">{t('dashboard.patient.book_consultation')}</h2>
-            <p className="mt-1 text-xs text-slate-500">Connect with a specialist now</p>
-            <span className="mt-3 inline-block text-xs font-semibold text-emerald-600">Book now →</span>
+            <p className="mt-1 text-xs text-slate-500">{t('dashboard.patient.book_subtitle')}</p>
+            <span className="mt-3 inline-block text-xs font-semibold text-emerald-600">{t('dashboard.patient.book_now')}</span>
           </Link>
 
           <button
@@ -195,8 +195,8 @@ export default function PatientDashboardPage() {
           >
             <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-violet-50 text-2xl group-hover:bg-violet-100 transition">🤖</div>
             <h2 className="font-semibold text-slate-800">{t('dashboard.patient.chat_with_ai')}</h2>
-            <p className="mt-1 text-xs text-slate-500">Describe symptoms, get guidance</p>
-            <span className="mt-3 inline-block text-xs font-semibold text-violet-600">Open chat →</span>
+            <p className="mt-1 text-xs text-slate-500">{t('dashboard.patient.chat_subtitle')}</p>
+            <span className="mt-3 inline-block text-xs font-semibold text-violet-600">{t('dashboard.patient.chat_open')}</span>
           </button>
 
           <Link
@@ -205,8 +205,8 @@ export default function PatientDashboardPage() {
           >
             <div className="mb-3 flex h-11 w-11 items-center justify-center rounded-xl bg-red-100 text-2xl group-hover:bg-red-200 transition">🚑</div>
             <h2 className="font-semibold text-red-700">{t('dashboard.patient.emergency')}</h2>
-            <p className="mt-1 text-xs text-red-500">Ambulance & emergency care</p>
-            <span className="mt-3 inline-block text-xs font-semibold text-red-600">Get help →</span>
+            <p className="mt-1 text-xs text-red-500">{t('dashboard.patient.emergency_subtitle')}</p>
+            <span className="mt-3 inline-block text-xs font-semibold text-red-600">{t('dashboard.patient.emergency_help')}</span>
           </Link>
         </section>
 
@@ -214,19 +214,19 @@ export default function PatientDashboardPage() {
         <section className="mb-6">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-lg font-bold text-slate-800">{t('dashboard.patient.my_appointments')}</h2>
-            <Link href="/book-appointment" className="text-xs font-medium text-emerald-600 hover:underline">+ New</Link>
+            <Link href="/book-appointment" className="text-xs font-medium text-emerald-600 hover:underline">{t('dashboard.patient.new_appointment')}</Link>
           </div>
 
           {appointments.length === 0 ? (
             <div className="rounded-2xl bg-white p-8 text-center shadow-sm">
               <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-full bg-slate-50 text-2xl">📅</div>
               <p className="font-medium text-slate-700">{t('dashboard.patient.no_appointments')}</p>
-              <p className="mt-1 text-sm text-slate-400">Book your first consultation in under 60 seconds</p>
+              <p className="mt-1 text-sm text-slate-400">{t('dashboard.patient.no_appointments_subtitle')}</p>
               <Link
                 href="/book-appointment"
                 className="mt-4 inline-block rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700"
               >
-                Book Now
+                {t('dashboard.patient.book_now_btn')}
               </Link>
             </div>
           ) : (
@@ -240,10 +240,10 @@ export default function PatientDashboardPage() {
                           Dr. {appt.doctor?.full_name ?? 'Doctor'}
                         </h3>
                         <span className={`rounded-full px-2 py-0.5 text-xs font-medium ${getStatusClasses(appt.status)}`}>
-                          {appt.status}
+                          {t(`common.${appt.status}`)}
                         </span>
                         <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-500">
-                          {appt.call_type === 'video' ? '📹 Video' : '📞 Audio'}
+                          {appt.call_type === 'video' ? t('common.video') : t('common.audio')}
                         </span>
                       </div>
                       <p className="mt-1.5 text-sm text-slate-500">
@@ -260,7 +260,7 @@ export default function PatientDashboardPage() {
                         rel="noopener noreferrer"
                         className="flex-shrink-0 rounded-xl bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
                       >
-                        Join Call
+                        {t('appointments.join_call')}
                       </a>
                     )}
                   </div>
@@ -279,7 +279,7 @@ export default function PatientDashboardPage() {
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-slate-50 text-xl">📋</div>
             <div>
               <p className="font-semibold text-slate-800">{t('dashboard.patient.my_prescriptions')}</p>
-              <p className="text-xs text-slate-400">View all past prescriptions</p>
+              <p className="text-xs text-slate-400">{t('dashboard.patient.prescriptions_subtitle')}</p>
             </div>
           </div>
           <span className="text-slate-400">→</span>
@@ -307,8 +307,8 @@ export default function PatientDashboardPage() {
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-violet-100 text-lg">🤖</div>
             <div>
-              <p className="font-bold text-slate-800">AI Health Assistant</p>
-              <p className="text-xs text-slate-500">Powered by Groq · Not a real doctor</p>
+              <p className="font-bold text-slate-800">{t('dashboard.patient.ai_title')}</p>
+              <p className="text-xs text-slate-500">{t('dashboard.patient.ai_powered')}</p>
             </div>
           </div>
           <button
@@ -325,7 +325,7 @@ export default function PatientDashboardPage() {
           {messages.length === 0 && (
             <div className="rounded-2xl bg-violet-50 border border-violet-100 p-5 text-center">
               <p className="text-sm font-medium text-violet-800">{t('ai_chat.subtitle')}</p>
-              <p className="mt-2 text-xs text-violet-600">I can help you understand symptoms, suggest next steps, and guide you to the right care.</p>
+              <p className="mt-2 text-xs text-violet-600">{t('ai_chat.intro_subtitle')}</p>
             </div>
           )}
           {messages.map((msg, i) => (
@@ -364,13 +364,13 @@ export default function PatientDashboardPage() {
         {showBookCta && (
           <div className="border-t border-emerald-100 bg-emerald-50 px-4 py-3">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-xs font-medium text-emerald-800">Ready to see a doctor?</p>
+              <p className="text-xs font-medium text-emerald-800">{t('dashboard.patient.ai_ready')}</p>
               <Link
                 href="/book-appointment"
                 onClick={() => setChatOpen(false)}
                 className="flex-shrink-0 rounded-xl bg-emerald-600 px-3 py-1.5 text-xs font-bold text-white transition hover:bg-emerald-700"
               >
-                Book Now
+                {t('dashboard.patient.ai_book_now')}
               </Link>
             </div>
           </div>
@@ -399,7 +399,7 @@ export default function PatientDashboardPage() {
               ↑
             </button>
           </div>
-          <p className="mt-2 text-center text-xs text-slate-400">Enter to send · This is not a substitute for a real doctor</p>
+          <p className="mt-2 text-center text-xs text-slate-400">{t('dashboard.patient.ai_enter_hint')}</p>
         </div>
       </div>
 

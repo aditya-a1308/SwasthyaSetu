@@ -76,9 +76,9 @@ function SignupForm() {
         <div className="text-3xl font-bold">{t('app_name')}</div>
         <p className="mt-3 text-lg text-emerald-100">{t('tagline')}</p>
         <div className="mt-8 flex flex-col gap-2">
-          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">✓ Video &amp; Audio Calls</span>
-          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">✓ AI Health Assistant</span>
-          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">✓ 3 Languages</span>
+          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{t('auth.aside_benefit1')}</span>
+          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{t('auth.aside_benefit2')}</span>
+          <span className="rounded-full bg-white/20 px-4 py-2 text-sm">{t('auth.aside_benefit3')}</span>
         </div>
       </aside>
 
@@ -90,7 +90,7 @@ function SignupForm() {
               {t('auth.signup_title')}
             </h1>
             <p className="mt-2 text-sm text-slate-500">
-              Join thousands getting care from home.
+              {t('auth.signup_subtitle')}
             </p>
           </div>
 

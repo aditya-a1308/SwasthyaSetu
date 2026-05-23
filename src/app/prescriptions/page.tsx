@@ -41,7 +41,7 @@ export default function PrescriptionsPage() {
     <div className="min-h-screen bg-gray-50 px-4 py-8">
       <div className="mx-auto max-w-2xl">
         <button type="button" onClick={() => router.back()} className="mb-6 block text-sm font-medium text-green-700">
-          ← Back
+          {t('prescription.back')}
         </button>
 
         <h1 className="text-2xl font-bold text-gray-800 mb-6">{t('dashboard.patient.my_prescriptions')}</h1>
@@ -49,7 +49,7 @@ export default function PrescriptionsPage() {
         {prescriptions.length === 0 ? (
           <div className="bg-white rounded-2xl shadow-sm p-10 text-center border border-gray-100">
             <div className="text-5xl text-gray-300 mb-3">📋</div>
-            <p className="text-gray-500">No prescriptions yet.</p>
+            <p className="text-gray-500">{t('prescription.no_prescriptions')}</p>
           </div>
         ) : (
           <div className="space-y-4">
@@ -64,14 +64,14 @@ export default function PrescriptionsPage() {
                       {new Date(rx.created_at).toLocaleDateString()}
                     </p>
                   </div>
-                  <span className="text-xs bg-green-100 text-green-700 rounded-full px-2 py-0.5 font-medium">Prescribed</span>
+                  <span className="text-xs bg-green-100 text-green-700 rounded-full px-2 py-0.5 font-medium">{t('prescription.prescribed')}</span>
                 </div>
 
                 <p className="text-sm text-gray-700 bg-gray-50 rounded-xl p-3 mb-3">{rx.content}</p>
 
                 {rx.medicines && rx.medicines.length > 0 && (
                   <div>
-                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Medicines</p>
+                    <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">{t('prescription.medicines_label')}</p>
                     <div className="space-y-1">
                       {rx.medicines.map((med, i) => (
                         <div key={i} className="flex gap-2 text-sm text-gray-700">
